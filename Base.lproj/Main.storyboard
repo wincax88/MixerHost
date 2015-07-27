@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="gJO-9F-2Zd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dpt-Mh-fa5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="MixerHost" id="0mx-ey-Qf6"/>
+                                </items>
+                            </navigationBar>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="rounded_rectangle.png" translatesAutoresizingMaskIntoConstraints="NO" id="tox-6e-eMI">
+                                <rect key="frame" x="10" y="178" width="299" height="74"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="rounded_rectangle.png" translatesAutoresizingMaskIntoConstraints="NO" id="uSL-q7-PVe">
+                                <rect key="frame" x="10" y="260" width="299" height="74"/>
+                            </imageView>
+                            <slider opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0099999997764825821" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="YAr-RM-ofG">
+                                <rect key="frame" x="142" y="217" width="160" height="31"/>
+                                <connections>
+                                    <action selector="mixerInputGainChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="P6E-g6-RcC"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gJW-Em-5cz">
+                                <rect key="frame" x="18" y="96" width="284" height="31"/>
+                                <connections>
+                                    <action selector="mixerOutputGainChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="DQK-kb-YQv"/>
+                                </connections>
+                            </slider>
+                            <switch opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tJk-Pf-shq">
+                                <rect key="frame" x="34" y="215" width="51" height="31"/>
+                                <connections>
+                                    <action selector="enableMixerInput:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Zku-GH-jvP"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Guitar" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ld5-WO-qt9">
+                                <rect key="frame" x="19" y="188" width="257" height="21"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dyD-Br-f6A">
+                                <rect key="frame" x="36" y="297" width="51" height="31"/>
+                                <connections>
+                                    <action selector="enableMixerInput:" destination="vXZ-lx-hvc" eventType="valueChanged" id="sw9-eW-jbi"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Output Volume" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="sbC-dr-pDx">
+                                <rect key="frame" x="21" y="67" width="257" height="21"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0099999997764825821" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vpx-WS-usQ">
+                                <rect key="frame" x="144" y="300" width="158" height="31"/>
+                                <connections>
+                                    <action selector="mixerInputGainChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="eRd-zD-65b"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Beats" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nzv-Hc-CPn">
+                                <rect key="frame" x="21" y="270" width="257" height="21"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZ2-tr-By7">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Yn8-Ic-yMG"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="YBy-vy-rQS"/>
+                                    <barButtonItem title="Play" width="240" style="plain" id="iVu-Ia-CwY">
+                                        <connections>
+                                            <action selector="playOrStop:" destination="vXZ-lx-hvc" id="1GJ-OQ-ZpE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="lQ0-Ny-cHM"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="yZ2-tr-By7" firstAttribute="leading" secondItem="gJO-9F-2Zd" secondAttribute="leadingMargin" constant="-16" id="8dL-km-fKF"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="yZ2-tr-By7" secondAttribute="bottom" id="Z9P-oC-Bxd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yZ2-tr-By7" secondAttribute="trailing" constant="-16" id="iHh-iV-rcs"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mixerBus0LevelFader" destination="YAr-RM-ofG" id="ZMU-a6-mXj"/>
+                        <outlet property="mixerBus0Switch" destination="tJk-Pf-shq" id="ZBX-IW-aV3"/>
+                        <outlet property="mixerBus1LevelFader" destination="vpx-WS-usQ" id="jwp-yz-7Z0"/>
+                        <outlet property="mixerBus1Switch" destination="dyD-Br-f6A" id="YcM-3Y-qJI"/>
+                        <outlet property="mixerOutputLevelFader" destination="gJW-Em-5cz" id="bmu-3v-W4K"/>
+                        <outlet property="playButton" destination="iVu-Ia-CwY" id="NNe-cP-EDP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rounded_rectangle.png" width="299" height="74"/>
+    </resources>
+</document>
